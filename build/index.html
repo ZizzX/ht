@@ -67,13 +67,13 @@
     <div id="form-nights" class="form --padding">
       <div class="form-title">Кол-во ночей от</div>
       <label for="nights">
-        <input required type="text" name="nights" id="nights" class="nights input_style" />
+        <input required min="5" max="15" type="number" name="nights" id="nights" class="nights input_style" />
       </label>
     </div>
     <div id="form-nights-to" class="form --padding">
       <div class="form-title">Кол-во ночей до</div>
       <label for="nights-to">
-        <input required type="text" name="nightsTo" id="nights-to" class="nights-to input_style" />
+        <input required type="number" min="5" max="15" name="nightsTo" id="nights-to" class="nights-to input_style" />
       </label>
     </div>
     <div class="form-btn form --padding --align-end --just-center">

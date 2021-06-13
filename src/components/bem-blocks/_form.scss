@@ -127,3 +127,30 @@
     padding: 5px 0 0 0;
   }
 }
+
+.nights-to,
+.nights {
+  &::placeholder {
+    font-size: 10px;
+    margin: 0;
+    color: red;
+  }
+
+
+  #form-nights-to,
+  #form-nights {
+    position: relative;
+  }
+}
+
+.error {
+  position: absolute;
+  bottom: 7px;
+  color: red;
+  font-size: 1em;
+  // transform: translate(0, -0%);
+
+  @include min-max(791, 1200) {
+    font-size: 12px;
+  }
+}

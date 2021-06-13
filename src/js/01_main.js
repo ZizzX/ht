@@ -1,29 +1,19 @@
-function createNode(element) {
-  return document.createElement(element);
-}
-function append(parent, el) {
-  return parent.appendChild(el);
-}
+const maxDate = changeDatePickerRange(90);
+const minDate = changeDatePickerRange(1);
 
-const millesec = getMillisecunds(90);
-const objDate = getDate(millesec);
+setMaxDate("date-input", maxDate);
+setMinDate("date-input", minDate);
 
-setMaxDate("date-input", date);
-setMinDate("date-input", date);
-
-console.log(getDate(millesec));
-
-// functions
+/* ============= functions =============== */
 
 function changeDatePickerRange(days) {
   const millesec = getMillisecunds(days);
-  const objDate = getDate(millesec);
-  const date = `${objDate.year}-${objDate.month}-${objDate.days}`;
+  const date = getDate(millesec);
   return date;
 }
 
-function getDate(rangeDate) {
-  const t = Date.now() + rangeDate,
+function getDate(millisec) {
+  const t = Date.now() + millisec,
     days = new Date(t).getDate(),
     month = new Date(t).getMonth() + 1,
     year = new Date(t).getFullYear();
@@ -51,4 +41,19 @@ function setMinDate(selector, date) {
 function getMillisecunds(days) {
   const mil = 1000 * 60 * 60 * 24 * days;
   return mil;
+}
+
+function createNode(element, className, message) {
+  const div = document.createElement(element);
+  div.classList.add(className);
+  div.textContent = message;
+  return div;
+}
+function removeNode(element, className) {
+  const element = document.querySelector(className);
+  element.remove();
+}
+
+function append(parent, el) {
+  return parent.append(el);
 }

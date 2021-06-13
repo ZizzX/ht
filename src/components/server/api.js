@@ -1,5 +1,23 @@
 window.addEventListener("DOMContentLoaded", () => {
   const $form = document.querySelector("#form");
+  const $nightsInput = document.querySelector("#nights"),
+    $nightsToInput = document.querySelector("#nights-to"),
+    $formNightTo = document.querySelector("#form-nights-to"),
+    $formNight = document.querySelector("#form-nights");
+
+  $nightsToInput.addEventListener("change", (e) => {
+    if (+$nights.value >= +e.target.value && +$nights.value) {
+      $nightsInput.value = "";
+      append($formNightTo, createNode("div", "error", "Error"));
+    }
+  });
+
+  $nightsInput.addEventListener("change", (e) => {
+    if (+$nightsToInput.value <= +e.target.value && +$nightsToInput.value) {
+      $nightsToInput.value = "";
+      append($formNight, createNode("div", "error", "Error"));
+    }
+  });
 
   const URL = "https://ht.kz/test/searchPartner1";
   const data = {
@@ -16,7 +34,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData($form);
     const json = JSON.stringify(Object.fromEntries(formData.entries()));
     console.log(json);
-    console.log(formData);
     postData(URL, json)
       .then((data) => {
         console.log(data);
@@ -25,8 +42,8 @@ window.addEventListener("DOMContentLoaded", () => {
         throw new Error("Error: " + err.message + ", error name: " + err.name);
       })
       .finally(() => {
-          $form.reset();
-      })
+        $form.reset();
+      });
   });
 
   const postData = async (url, data) => {
