@@ -1,0 +1,225 @@
+// .select input {
+//   display: none;
+// }
+
+// #text {
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   padding-left: 10px;
+// }
+
+// .country .select,
+// .city .select {
+//   display: inline-block;
+
+//   line-height: 30px;
+//   position: relative;
+//   z-index: 3;
+
+//   &::before {
+//     content: "\2304";
+//     width: 35px;
+//     height: 35px;
+//     display: inline-block;
+//     cursor: pointer;
+//     text-align: center;
+//     position: absolute;
+//     top: 0px;
+//     right: -10px;
+//     z-index: 2;
+//     line-height: 13px;
+//     border: 2px solid #ddd;
+//   }
+
+//   .items {
+//     display: block;
+//     min-height: 30px;
+//     position: absolute;
+//     width: 205px;
+//     overflow: hidden;
+//     cursor: pointer;
+//     background: #fff;
+//     border: 2px solid #ddd;
+
+//     label {
+//       display: none;
+//       border-top: 2px solid #ddd;
+//       padding-left: 10px;
+//       background: #fff;
+
+//       &:hover {
+//         cursor: pointer;
+//         background-color: #eee;
+//       }
+//     }
+//   }
+// }
+
+// #city:disabled ~ .items #text,
+// #country:disabled ~ .items #text {
+//   background: #eee;
+// }
+
+// #city:not(:checked) ~ .items,
+// #country:not(:checked) ~ .items {
+//   height: 35px;
+// }
+
+// #city:checked ~ .items,
+// #country:checked ~ .items {
+//   padding-top: 32px;
+
+//   label {
+//     display: block !important;
+//   }
+// }
+
+// .city .items input:checked + label,
+// .country .items input:checked + label {
+//   display: block !important;
+//   border: none;
+//   background-color: #fff;
+// }
+
+// .city .items input:checked ~ #text,
+// .country .items input:checked ~ #text {
+//   display: none;
+// }
+
+// #city:checked ~ .bg,
+// #country:checked ~ .bg {
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   z-index: 0;
+// }
+
+// .city input:not(:checked) ~ #text,
+// .country input:not(:checked) ~ #text {
+//   color: #000;
+//   background: #ffffff;
+// }
+
+// .city input:checked ~ text {
+//   color: transparent;
+//   background: transparent;
+//   z-index: 2;
+// }
+
+// #city:checked ~ .bg-city {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 0;
+// }
+
+// #country:checked ~ .bg-country {
+//     position: fixed;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 0;
+// }
+
+.input_style {
+  width: 195px;
+  height: 34px;
+  border: none;
+  padding: 0 10px;
+
+  @include max(1200) {
+    width: 170px;
+  }
+  @include max(1024) {
+    width: 150px;
+    font-size: 15px;
+  }
+  @include max(992) {
+    // width: 115px;
+    width: 120px;
+    font-size: 14px;
+  }
+  @include max(768) {
+    width: 245px;
+  }
+  @include max(662) {
+    font-size: 12px;
+  }
+  @include max(425) {
+    width: 190px;
+  }
+  @include max(319) {
+    width: 180px;
+    font-size: 11px;
+    height: 26px;
+  }
+}
+
+.form-wrapper {
+  position: relative;
+  top: -50px;
+  padding: 20px 0px 5px;
+  margin: 0 -10px;
+  background: #06e6ee;
+  border-radius: 10px 0 10px 0;
+  box-shadow: 0 5px 20px -2px rgb(4, 221, 236);
+
+  @include max(768) {
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    top: -50px;
+  }
+  @include max(425) {
+    width: 220px;
+  }
+
+  @include max(424) {
+    width: 100%;
+  }
+}
+
+.form-title {
+  margin: 0 0 10px 0;
+  color: #000;
+  font-weight: 700;
+
+  @include max(1024) {
+    font-size: 15px;
+  }
+  @include max(992) {
+    font-size: 13px;
+  }
+  @include max(662) {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+  }
+  @include max(319) {
+    font-size: 11px;
+  }
+}
+
+.form {
+  display: inline-block;
+  margin: 0 0 25px;
+  @include max(662) {
+    margin: 0 0 15px 0;
+  }
+}
+
+.date-input {
+  border: none;
+  padding: 0 0 0 10px;
+}
+
+.--padding {
+  padding: 0 10px;
+}

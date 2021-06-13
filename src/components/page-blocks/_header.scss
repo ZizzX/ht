@@ -1,0 +1,116 @@
+.header {
+  height: 450px;
+  background: url("/img/bg/header-bg.jpg");
+  @include bg("cover");
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.39);
+  }
+  &-title {
+    max-width: 90%;
+    position: relative;
+    font-size: 4em;
+    font-weight: 900;
+    top: 2em;
+    left: 50px;
+    color: #ffffff;
+
+    @include max(1024) {
+      font-size: 3em;
+    }
+    @include max(992) {
+      font-size: 2.6em;
+    }
+    @include max(768) {
+      font-size: 2.2em;
+    }
+    @include max(662) {
+      font-size: 1.8em;
+    }
+
+    @include max(550) {
+      font-size: 1.3em;
+    }
+
+    @include min-max(320, 424) {
+      top: 50px;
+      left: 5px;
+      line-height: 25px;
+    }
+
+    @include max(319) {
+      font-size: 1em;
+      left: 0;
+    }
+  }
+
+  @include max(1024) {
+    height: 375px;
+  }
+  @include max(992) {
+    height: 315px;
+  }
+  @include max(768) {
+    height: 265px;
+  }
+  @include max(662) {
+    height: 230px;
+  }
+  @include max(550) {
+    height: 180px;
+  }
+  @include max(319) {
+    height: 140px;
+  }
+}
+
+.close-btn {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: calc(100% - 4em);
+  // right: calc(-100% + 2em);
+  width: 30px;
+  height: 3px;
+  background: #ffffff;
+  transition: width 0.3s ease-in-out;
+  &::after,
+  &::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  &::after {
+    top: 8px;
+  }
+  &::before {
+    bottom: 8px;
+  }
+
+  @include max(768) {
+    display: block;
+  }
+}
+
+.close-btn.active {
+  width: 0;
+  &::after {
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  &::before {
+    bottom: 0px;
+    transform: rotate(-45deg);
+  }
+}
