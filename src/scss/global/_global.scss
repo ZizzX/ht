@@ -10,8 +10,16 @@
 	justify-content: flex-start;
 }
 
+.--wrap {
+	flex-wrap: wrap;
+}
+
 .--just-space {
 	justify-content: space-between;
+}
+
+.--just-around {
+	justify-content: space-around;
 }
 
 .--just-center {
@@ -49,6 +57,7 @@ body {
 }
 
 body {
+	font-family: 'Arial', sans-serif;
 	font-size: 1rem;
 }
 
