@@ -1,4 +1,3 @@
-
 .input_style {
   width: 195px;
   height: 34px;
@@ -84,7 +83,7 @@
   }
 }
 
-.form {
+.--margin-bottom {
   display: inline-block;
   margin: 0 0 25px;
   @include max(662) {
@@ -114,7 +113,8 @@
 }
 
 .btn {
-  transition: all .3s ease-in;
+  transition: color 0.3s ease-in-out, box-shadow 0.2s ease-in-out 0.1s,
+    background-color 0.3s ease-in-out, padding 0.2s linear 0.1s;
   &:hover {
     cursor: pointer;
     color: #fff;
@@ -131,11 +131,10 @@
 .nights-to,
 .nights {
   &::placeholder {
-    font-size: 10px;
+    font-size: 11px;
     margin: 0;
-    color: red;
+    color: #000;
   }
-
 
   #form-nights-to,
   #form-nights {
@@ -144,13 +143,24 @@
 }
 
 .error {
-  position: absolute;
-  bottom: 7px;
   color: red;
-  font-size: 1em;
-  // transform: translate(0, -0%);
-
-  @include min-max(791, 1200) {
-    font-size: 12px;
+  outline: 2px solid red;
+  &::placeholder {
+    font-size: inherit;
   }
+}
+
+
+.form-date-picker {
+  position: relative;
+  outline: 0;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  position: absolute;
+  width: auto;
+  inset: 0;
 }

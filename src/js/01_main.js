@@ -43,17 +43,13 @@ function getMillisecunds(days) {
   return mil;
 }
 
-function createNode(element, className, message) {
-  const div = document.createElement(element);
-  div.classList.add(className);
-  div.textContent = message;
-  return div;
-}
-function removeNode(element, className) {
-  const element = document.querySelector(className);
-  element.remove();
-}
+// function createNode(element, className, message) {
+//   const div = document.createElement(element);
+//   div.classList.add(className);
+//   div.textContent = message;
+//   return div;
+// }
 
-function append(parent, el) {
-  return parent.append(el);
-}
+// function append(parent, el) {
+//   return parent.append(el);
+// }

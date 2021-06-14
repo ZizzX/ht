@@ -1,45 +1,62 @@
 <div class="container">
   <form id="form" class="form-wrapper flex --just-center --wrap">
-    <div id="form-city" class="form --padding">
-      <div class="city">
-        <div class="form-title">Город вылета</div>
-        <select required name="departCity" class="input_style">
-          <option value="" disabled selected hidden>Город</option>
-          <option value="10">Алматы</option>
-          <option value="11">Астана</option>
-        </select>
-      </div>
+    <div id="form-city" class="--margin-bottom --padding">
+      <div class="form-title">Город вылета</div>
+      <select required name="departCity" class="input_style">
+        <option value="" disabled selected hidden>Город</option>
+        <option value="10">Алматы</option>
+        <option value="11">Астана</option>
+      </select>
     </div>
-    <div id="form-country" class="form --padding">
-      <div class="country">
-        <div class="form-title">Страна</div>
-        <select required name="country" class="input_style">
-          <option value="" disabled selected hidden>Страна</option>
-          <option value="552">Турция</option>
-          <option value="553">Тайланд</option>
-          <option value="554">Чехия</option>
-        </select>
-      </div>
+    <div id="form-country" class="--margin-bottom --padding">
+      <div class="form-title">Страна</div>
+      <select required name="country" class="input_style">
+        <option value="" disabled selected hidden>Страна</option>
+        <option value="552">Турция</option>
+        <option value="553">Тайланд</option>
+        <option value="554">Чехия</option>
+      </select>
     </div>
-    <div id="form-date-picker" class="form --padding">
+    <div
+      id="form-date-picker"
+      class="form-date-picker --margin-bottom --padding"
+    >
       <div class="form-title">Дата вылета</div>
-      <label for="date-input">
-        <input required type="date" max='2021-06-14' name="date" id="date-input" class="date-input input_style" />
-      </label>
+      <input
+        required
+        type="date"
+        name="date"
+        id="date-input"
+        class="date-input input_style"
+      />
     </div>
-    <div id="form-nights" class="form --padding">
+    <div id="form-nights" class="--margin-bottom --padding">
       <div class="form-title">Кол-во ночей от</div>
-      <label for="nights">
-        <input required min="5" max="15" type="number" name="nights" id="nights" class="nights input_style" />
-      </label>
+      <input
+        required
+        placeholder="от 5 до 15"
+        type="number"
+        min="5"
+        max="15"
+        name="nights"
+        id="nights"
+        class="nights input_style"
+      />
     </div>
-    <div id="form-nights-to" class="form --padding">
+    <div id="form-nights-to" class="--margin-bottom --padding">
       <div class="form-title">Кол-во ночей до</div>
-      <label for="nights-to">
-        <input required type="number" min="5" max="15" name="nightsTo" id="nights-to" class="nights-to input_style" />
-      </label>
+      <input
+        required
+        placeholder="от 5 до 15"
+        type="number"
+        min="5"
+        max="15"
+        name="nightsTo"
+        id="nights-to"
+        class="nights-to input_style"
+      />
     </div>
-    <div class="form-btn form --padding --align-end --just-center">
+    <div class="form-btn --margin-bottom --padding --align-end --just-center">
       <button type="submit" class="btn input_style">Отправить</button>
     </div>
   </form>
