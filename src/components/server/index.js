@@ -92,6 +92,8 @@ window.addEventListener("DOMContentLoaded", () => {
           <td>${tour.currency}</td>
         </tr>
         `;
+
+        document.querySelector('#tours').classList.add('tours')
         });
       })
       .catch((err) => {
