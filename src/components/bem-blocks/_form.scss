@@ -4,6 +4,8 @@
   border: none;
   padding: 0 10px;
 
+  font-weight: 600;
+
   border-radius: 4px;
 
   @include max(1440) {
@@ -38,7 +40,7 @@
   }
 }
 
-.form-wrapper {
+.form {
   position: relative;
   top: -50px;
   padding: 20px 0px 5px;
@@ -64,9 +66,14 @@
 }
 
 .form-title {
-  margin: 0 0 10px 0;
   color: #000;
   font-weight: 700;
+  &_margin {
+    margin: 0 0 10px 0;
+    @include max(662) {
+      margin: 0 0 5px 0;
+    }
+  }
 
   @include max(1024) {
     font-size: 15px;
@@ -75,7 +82,6 @@
     font-size: 13px;
   }
   @include max(662) {
-    font-size: 12px;
     margin: 0 0 5px 0;
   }
   @include max(319) {
@@ -100,7 +106,7 @@
   padding: 0 10px;
 }
 
-.form-btn {
+.form__btn {
   height: 62px;
   display: flex;
 
@@ -131,7 +137,7 @@
 .nights-to,
 .nights {
   &::placeholder {
-    font-size: 11px;
+    font-size: .75rem;
     margin: 0;
     color: #000;
   }
@@ -151,9 +157,10 @@
 }
 
 
-.form-date-picker {
+.form__date-picker {
   position: relative;
   outline: 0;
+  cursor: pointer;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent;
@@ -164,3 +171,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: auto;
   inset: 0;
 }
+

@@ -36,29 +36,29 @@
 
 	<main class="main">
 	<div class="container">
-  <form id="form" class="form-wrapper flex --just-center --wrap">
-    <div id="form-city" class="--margin-bottom --padding">
-      <div class="form-title">Город вылета</div>
-      <select required name="departCity" class="input_style">
+  <form id="form" class="form flex --just-center --wrap">
+    <div id="form-city" class="form__city --margin-bottom --padding">
+      <div class="form-title form-title_margin">Город вылета</div>
+      <select required name="departCity" id="depart-city" class="form__select input_style">
         <option value="" disabled selected hidden>Город</option>
         <option value="10">Алматы</option>
         <option value="11">Астана</option>
       </select>
     </div>
-    <div id="form-country" class="--margin-bottom --padding">
-      <div class="form-title">Страна</div>
-      <select required name="country" class="input_style">
+    <div id="form-country" class="form__country --margin-bottom --padding">
+      <div class="form-title form-title_margin">Страна</div>
+      <select required name="country" id="country" class="form__select input_style">
         <option value="" disabled selected hidden>Страна</option>
-        <option value="552">Турция</option>
+        <!-- <option value="552">Турция</option>
         <option value="553">Тайланд</option>
-        <option value="554">Чехия</option>
+        <option value="554">Чехия</option> -->
       </select>
     </div>
     <div
       id="form-date-picker"
-      class="form-date-picker --margin-bottom --padding"
+      class="form__date-picker --margin-bottom --padding"
     >
-      <div class="form-title">Дата вылета</div>
+      <div class="form-title form-title_margin">Дата вылета</div>
       <input
         required
         type="date"
@@ -67,8 +67,8 @@
         class="date-input input_style"
       />
     </div>
-    <div id="form-nights" class="--margin-bottom --padding">
-      <div class="form-title">Кол-во ночей от</div>
+    <div id="form-nights" class="form__nights --margin-bottom --padding">
+      <div class="form-title form-title_margin">Кол-во ночей от</div>
       <input
         required
         placeholder="от 5 до 15"
@@ -80,8 +80,8 @@
         class="nights input_style"
       />
     </div>
-    <div id="form-nights-to" class="--margin-bottom --padding">
-      <div class="form-title">Кол-во ночей до</div>
+    <div id="form-nights-to" class="form__nights-to --margin-bottom --padding">
+      <div class="form-title form-title_margin">Кол-во ночей до</div>
       <input
         required
         placeholder="от 5 до 15"
@@ -93,15 +93,45 @@
         class="nights-to input_style"
       />
     </div>
-    <div class="form-btn --margin-bottom --padding --align-end --just-center">
+    <div class="form__btn --margin-bottom --padding --align-end --just-center">
       <button type="submit" class="btn input_style">Отправить</button>
     </div>
   </form>
 </div>
 
 	<div id="tours">
+  <div class="container">
+    <div class="tours__title tours__title_margin">
+      <!-- <h2>
+        Результаты запроса (<span class="tours__city-span"></span> -
+        <span class="tours__country-span"></span>,
+        <span class="tours__date-span"></span>,
+        <span class="tours__nights-span"></span>-<span
+          class="tours__nights-to-span"
+        ></span
+        >н.):
+      </h2> -->
+    </div>
 
+    <table class="tour-table">
+      <thead>
+        <!-- <tr>
+          <th>Hotel name</th>
+          <th>price</th>
+          <th>currency</th>
+        </tr> -->
+      </thead>
+      <tbody id="tourTableBody">
+        <!-- <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
 </div>
+
 	</main>
 	<footer class="footer"></footer>
 

@@ -1,0 +1,34 @@
+table.tour-table {
+    width: 100%;
+    min-height: 150px;
+    text-align: left;
+    margin: 0 0 125px;
+    border-collapse: collapse;
+  }
+  table.tour-table td, table.tour-table th {
+    border: 2px solid #AAAAAA;
+    padding: 6px 2px;
+  }
+  table.tour-table tbody td {
+    font-size: 16px;
+    color: #000000;
+  }
+  table.tour-table tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table.tour-table thead {
+    background: #06E6EE;
+    background: -moz-linear-gradient(top, #44ecf2 0%, #1fe8ef 66%, #06E6EE 100%);
+    background: -webkit-linear-gradient(top, #44ecf2 0%, #1fe8ef 66%, #06E6EE 100%);
+    background: linear-gradient(to bottom, #44ecf2 0%, #1fe8ef 66%, #06E6EE 100%);
+  }
+  table.tour-table thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+
+
+  .tours__title_margin {
+      margin: 0 0 25px 0;
+  }
