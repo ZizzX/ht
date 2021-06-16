@@ -1,3 +1,3 @@
 # ht.kz test
 <hr/>
-## https://zizzx.github.io/ht/
+## https://zizzx.github.io/ht/build/
